@@ -1,0 +1,26 @@
+{
+    "pools": [
+        {
+            "name": "mospells",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "empty",
+                    "weight": 97
+                },
+                {
+                    "type": "item",
+                    "name": "mospells:mospells_spell_book",
+                    "entryName": "mospells_spell_book",
+                    "weight": 3,
+                    "functions": [
+                        {
+                            "function": "ebwizardry:random_spell",
+                            "undiscovered_bias": 0.3
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

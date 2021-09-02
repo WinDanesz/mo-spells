@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "name": "main",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "mospells:ring_wind_touch",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "mospells:charm_cold_winds",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

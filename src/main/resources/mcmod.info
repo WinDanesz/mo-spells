@@ -1,0 +1,19 @@
+[
+    {
+        "modid": "mospells",
+        "name": "Mo' Spells",
+        "description": "Mo' Spells is an Electroblob's Wizardry spell pack mod, which adds special compatibility and interactions with the Mowzie's Mobs mod! This includes new spells, new ways to summon Mowzie mobs as summons, artefacts and other features.",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/mo-spells",
+        "updateUrl": "",
+        "authorList": ["WinDanesz"],
+        "credits": "
+        Created by WinDanesz
+        Bob Mowzie - the creator of the Mowzie's Mobs mod. This mod relies on his entities, effects and visuals to create a more immersive integration between Electroblobs Wizardry and his mod.
+        Electroblob - the creator of the Electroblob's Wizardry Mod",
+        "logoFile" : "assets/mospells/textures/gui/logo.png",
+        "screenshots": [],
+        "dependencies": []
+    }
+]

@@ -1,0 +1,22 @@
+{
+    "enabled": {
+        "book": true,
+        "scroll": true,
+        "wands": true,
+        "npcs": true,
+        "dispensers": false,
+        "commands": true,
+        "treasure": false,
+        "trades": false,
+        "looting": false
+    },
+    "tier": "apprentice",
+    "element": "ice",
+    "type": "attack",
+    "cost": 5,
+    "chargeup": 5,
+    "cooldown": 40,
+    "base_properties": {
+        "damage": 3
+    }
+}
