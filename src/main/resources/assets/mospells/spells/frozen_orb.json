@@ -12,7 +12,7 @@
     },
     "tier": "master",
     "element": "ice",
-    "type": "attack",
+    "type": "projectile",
     "cost": 80,
     "chargeup": 20,
     "cooldown": 200,

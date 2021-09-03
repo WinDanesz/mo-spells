@@ -11,6 +11,7 @@ import electroblob.wizardry.util.AllyDesignationSystem;
 import electroblob.wizardry.util.EntityUtils;
 import electroblob.wizardry.util.ParticleBuilder;
 import electroblob.wizardry.util.SpellModifiers;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -29,6 +30,15 @@ public class Supernova extends Spell {
 
 	@Override
 	public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers) {
+		return createNova(world, caster, hand, ticksInUse, modifiers);
+	}
+
+	@Override
+	public boolean cast(World world, EntityLiving caster, EnumHand hand, int ticksInUse, EntityLivingBase target, SpellModifiers modifiers) {
+		return createNova(world, caster, hand, ticksInUse, modifiers);
+	}
+
+	public boolean createNova(World world, EntityLivingBase caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers) {
 
 		if (world.isRemote) {
 			for (int i = 0; i < 20; i++) {
@@ -50,7 +60,7 @@ public class Supernova extends Spell {
 		}
 
 		if (ticksInUse == 0) {
-			world.playSound(caster, caster.getPosition(), MMSounds.ENTITY_SUPERNOVA_BLACKHOLE, SoundCategory.PLAYERS, 2f, 1.2f);
+			world.playSound(null, caster.getPosition(), MMSounds.ENTITY_SUPERNOVA_BLACKHOLE, SoundCategory.PLAYERS, 2f, 1.2f);
 
 		}
 
@@ -84,6 +94,12 @@ public class Supernova extends Spell {
 		if (ticksInUse > 60) {
 			caster.stopActiveHand();
 		}
+		return true;
+
+	}
+
+	@Override
+	public boolean canBeCastBy(EntityLiving npc, boolean override) {
 		return true;
 	}
 

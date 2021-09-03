@@ -4,6 +4,7 @@ import com.bobmowzie.mowziesmobs.server.potion.PotionHandler;
 import com.windanesz.mospells.MoSpells;
 import com.windanesz.mospells.registry.MSItems;
 import electroblob.wizardry.spell.SpellBuff;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.item.Item;
 
 public class NagaAspect extends SpellBuff {
@@ -12,5 +13,11 @@ public class NagaAspect extends SpellBuff {
 	}
 
 	@Override
+	public boolean canBeCastBy(EntityLiving npc, boolean override) {
+		return true;
+	}
+
+	@Override
 	public boolean applicableForItem(Item item) { return item == MSItems.mospells_spell_book || item == MSItems.mospells_scroll; }
+
 }

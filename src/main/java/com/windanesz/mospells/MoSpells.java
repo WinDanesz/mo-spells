@@ -2,6 +2,7 @@ package com.windanesz.mospells;
 
 import com.windanesz.mospells.registry.MSItems;
 import com.windanesz.mospells.registry.MSLoot;
+import electroblob.wizardry.spell.Spell;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -9,6 +10,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
+
+import java.io.FileWriter;
+import java.io.IOException;
 
 @Mod(
 		modid = MoSpells.MODID,
@@ -70,5 +74,38 @@ public class MoSpells {
 	 * This is the final initialization event. Register actions from other mods here
 	 */
 	@Mod.EventHandler
-	public void postinit(FMLPostInitializationEvent event) {}
+	public void postinit(FMLPostInitializationEvent event) {
+		int i = 1;
+		String firstAppeared = "1.0.0";
+
+		for(Spell spell : Spell.getAllSpells()){
+
+			try{
+
+				FileWriter writer = new FileWriter("C:\\git\\MoSpells\\src\\generated\\" + spell.getDisplayName().replace(' ', '-') + ".md");
+
+				writer.write("| " + spell.getDisplayName() + " |![](https://github.com/WinDanesz/mo-spells/blob/1.12.2/src/main/resources/assets/mospells/textures/spells/" + spell.getUnlocalisedName() + ".png)|\n" +
+						"|---|---|\n" +
+						"| Tier | " + spell.getTier().getDisplayName() + " |\n" +
+						"| Element | " + spell.getElement().getDisplayName() + " |\n" +
+						"| Type | " + spell.getType().getDisplayName() + " |\n" +
+						"| Mana Cost | " + spell.getCost() + " |\n" +
+						"| Continuous | " + (spell.isContinuous ? "Yes" : "No") + " |\n" +
+						"| Cast by wizards | " +  "No" + " |\n" +
+						"| Cast by dispensers | " + "No" + " |\n" +
+						"| ID | `" + spell.getRegistryName() + "` |\n" +
+						"| Metadata | " + i++ + " |\n" +
+						"| First appeared in | Wizardry " + firstAppeared + " |\n" +
+						"## Description\n" +
+						"_" + spell.getDescription() + "_");
+
+				writer.close();
+
+			}catch(IOException e){
+				e.printStackTrace();
+			}
+		}
+
+
+	}
 }

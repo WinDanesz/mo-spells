@@ -6,12 +6,12 @@
         "npcs": true,
         "dispensers": true,
         "commands": true,
-        "treasure": true,
-        "trades": true,
-        "looting": true
+        "treasure": false,
+        "trades": false,
+        "looting": false
     },
     "tier": "advanced",
-    "element": "fire",
+    "element": "earth",
     "type": "minion",
     "cost": 40,
     "chargeup": 10,

@@ -31,5 +31,10 @@ public class Pillar extends Spell {
 	}
 
 	@Override
+	public boolean canBeCastBy(EntityLiving npc, boolean override) {
+		return true;
+	}
+
+	@Override
 	public boolean applicableForItem(Item item) { return item == MSItems.mospells_spell_book || item == MSItems.mospells_scroll; }
 }

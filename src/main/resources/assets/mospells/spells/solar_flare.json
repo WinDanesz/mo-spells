@@ -10,10 +10,10 @@
         "trades": false,
         "looting": false
     },
-    "tier": "apprentice",
+    "tier": "advanced",
     "element": "fire",
     "type": "attack",
-    "cost": 80,
+    "cost": 50,
     "chargeup": 0,
     "cooldown": 40,
     "base_properties": {

@@ -7,6 +7,7 @@ import com.windanesz.mospells.registry.MSItems;
 import electroblob.wizardry.spell.SpellMinion;
 import electroblob.wizardry.util.SpellModifiers;
 import net.ilexiconn.llibrary.server.entity.EntityPropertiesHandler;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -29,6 +30,11 @@ public class SummonBarakoaSpirit extends SpellMinion<EntityBarakoaSpiritMinion> 
 			minion.setWeapon(minion.randomizeWeapon());
 			property.addPackMember(minion);
 		}
+	}
+
+	@Override
+	public boolean canBeCastBy(EntityLiving npc, boolean override) {
+		return true;
 	}
 
 	@Override

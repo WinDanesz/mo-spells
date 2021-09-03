@@ -27,14 +27,14 @@ spell.mospells\:summon_naga.desc=Summons a Naga to fight for you. The naga will 
 spell.mospells\:summon_frostmaw.non_ice_wand=Only a Master Ice Wand can summon a Frostmaw
 spell.mospells\:summon_frostmaw.desc=Summons a Frostmaw to fight for you. The Frostmaw will disappear after 1,5 minutes or if it is killed. This spell can only be used once a day.
 spell.mospells\:summon_barakoa_spirit.desc=Summons a Barakoa Spirit to fight for you. The spirit will disappear after 30 seconds or if it is killed.
-spell.mospells\:solar_flare.desc=Accumulates solar energy, then unleashes it to burn all nearby enemies and knock them away with the blast.
+spell.mospells\:solar_flare.desc=Accumulates solar energy during a channeling, then unleashes it to burn all nearby enemies and knock them away with the blast.
 spell.mospells\:solar_beam.desc=After a short channeling, unleashes the power of Heliomancy to burn all enemies caught in the beam.
 spell.mospells\:rupture.desc=Shatters the ground in front of the caster, damaging and pulling all enemies.
 spell.mospells\:poison_ball.desc=Hurls a Naga poison ball in the direction you are pointing which damages and poisons targets on impact.
 spell.mospells\:pillar.desc=Conjures a levitating pillar under the player if the player stands stone or dirt. The pillar disappears after 60 seconds.
 spell.mospells\:naga_aspect.desc=Grants the caster resistance against poison for 30 seconds.
 spell.mospells\:lesser_geomancy.desc=Targeting the ground creates a floating boulder. Re-casting the spell on the boulder shoots it as a projectile.
-spell.mospells\:frozen_orb.desc=Launches a large ice orb in the direction you are pointing which freezes enemies it passes through and deals a devastating damage.
+spell.mospells\:frozen_orb.desc=Launches a large ice orb in the direction the caster is pointing which freezes enemies it passes through and deals devastating damage.
 spell.mospells\:frost_breath.desc=Creates a powerful stream of frost, damaging all enemies caught in the blast and freezing them solid over time.
 
 cannot_use_spell_again_today=You cannot use this spell again today

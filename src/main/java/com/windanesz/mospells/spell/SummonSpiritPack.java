@@ -10,6 +10,7 @@ import electroblob.wizardry.spell.SpellMinion;
 import electroblob.wizardry.util.EntityUtils;
 import electroblob.wizardry.util.SpellModifiers;
 import net.ilexiconn.llibrary.server.entity.EntityPropertiesHandler;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -61,6 +62,11 @@ public class SummonSpiritPack extends SpellMinion<EntityBarakoaSpiritMinion> {
 				}
 			}
 		}
+	}
+
+	@Override
+	public boolean canBeCastBy(EntityLiving npc, boolean override) {
+		return true;
 	}
 
 	@Override
