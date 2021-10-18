@@ -1,25 +1,28 @@
+# PARSE_ESCAPES
+
 spell.mospells\:frost_breath=寒霜吐息
 spell.mospells\:frozen_orb=寒冰寶珠
-spell.mospells\:lesser_geomancy=弱化大地之力
+spell.mospells\:lesser_geomancy=弱化大地祝福
 spell.mospells\:naga_aspect=納迦海妖姿態
 spell.mospells\:pillar=支柱
 spell.mospells\:poison_ball=毒液球
 spell.mospells\:rupture=裂地
-spell.mospells\:solar_beam=陽光烈焰
+spell.mospells\:solar_beam=太陽光束
 spell.mospells\:solar_flare=陽光衝擊
 spell.mospells\:summon_barakoa_spirit=召喚獵頭族靈魂
 spell.mospells\:summon_frostmaw=召喚冬之靈
 spell.mospells\:summon_naga=召喚納迦海妖
 spell.mospells\:summon_spirit_pack=召喚靈魂群
 spell.mospells\:suns_blessing=太陽祝福
-spell.mospells\:sunstrike=太陽光束
+spell.mospells\:sunstrike=太陽耀斑
 spell.mospells\:supernova=超新星
 spell.mospells\:winds_of_winter=寒冬之風
+
 spell.mospells\:winds_of_winter.desc=寒冬之風從施法者的法杖發散而出，將怪物推開並冰凍它們。
 spell.mospells\:supernova.desc=以太陽的威能抹殺你的敵人。
 spell.mospells\:sunstrike.desc=在施法者所指的位置創造一股從天而落的強勁太陽光束，傷害其附近的任何敵人。
 spell.mospells\:suns_blessing.desc=賜予目標太陽祝福。
-spell.mospells\:summon_spirit_pack.desc=召喚一支獵頭族小隊的靈魂來為你所用。這些靈魂會持續 45 秒。
+spell.mospells\:summon_spirit_pack.desc=召喚一支獵頭族小隊靈魂來為你所用。這些靈魂會持續 45 秒。
 spell.mospells\:summon_naga.desc=召喚一隻納迦海妖來為你戰鬥。這隻納迦海妖會在 45 秒後消失。
 spell.mospells\:summon_frostmaw.non_ice_wand=只有一把大師級的冰霜法杖才能召喚冬之靈
 spell.mospells\:summon_frostmaw.desc=召喚一頭冬之靈來為你作戰。冬之靈會在 1.5 分鐘後消失。這個法術每天只能使用一次。
@@ -27,16 +30,18 @@ spell.mospells\:summon_barakoa_spirit.desc=召喚一個獵頭族的靈魂來為�
 spell.mospells\:solar_flare.desc=在引導時聚集太陽的能量，然後釋放它來點燃所有附近的敵人，且還能通過爆炸把他們擊退。
 spell.mospells\:solar_beam.desc=在短暫的引導後釋放太陽神力的光束來焚毀所有被擊中的敵人。
 spell.mospells\:rupture.desc=粉碎施法者面前的大地，傷害並拉扯所有敵人。
-spell.mospells\:poison_ball.desc=向你所指的方向投射出一顆納迦海妖的毒液球，來傷害它觸碰到的目標並使其中毒。
+spell.mospells\:poison_ball.desc=向你所指的方向投射出一顆飛蛇納迦海妖的毒液球，來傷害它觸碰到的目標並使其中毒。
 spell.mospells\:pillar.desc=如果地面是石頭或泥土，則能在你身下創造一塊懸浮的支柱。這個支柱會在 60 秒後消失。
 spell.mospells\:naga_aspect.desc=使施法者在 30 秒內免疫劇毒狀態。
 spell.mospells\:lesser_geomancy.desc=右擊地面來製造一塊漂浮的巨石。再次在巨石上施法來把它作為彈射物射出。
 spell.mospells\:frozen_orb.desc=向所指之處發射巨大的寒冰寶珠，凍結敵人並造成毀滅性的傷害。
 spell.mospells\:frost_breath.desc=創造一股寒流，傷害所有被命中的敵人並逐漸把他們凍結。
+
 cannot_use_spell_again_today=你今天無法再使用這個法術
+
 item.mospells\:amulet_earth.desc=支柱法術能製造一個更大的支柱\n弱化大地祝福能操縱支柱以及更大的巨石
 item.mospells\:amulet_earth.name=泥土護符
-item.mospells\:amulet_frostmaw.desc=增加 25%% 冰霜法術強度\n施放冰霜法術讓你獲得冰霜護體效果\n你必須殺死一頭冰霜巨口來讓這個飾品生效
+item.mospells\:amulet_frostmaw.desc=增加 25%% 冰霜法術強度\n施放冰霜法術讓你獲得冰霜護體效果\n你必須殺死一頭冬之靈來讓這個飾品生效
 item.mospells\:amulet_frostmaw.name=冬之靈的角項圈
 item.mospells\:amulet_golden_sun.desc=增加 25%% 火焰法術強度\n施放火焰法術時獲得獄炎肌膚和抗火效果\n你必須殺死一名太陽酋長來讓這個飾品生效
 item.mospells\:amulet_golden_sun.name=黃金之日吊墜
@@ -48,6 +53,7 @@ item.mospells\:ring_ice_crystal.desc=寒霜吐息將能吹飛彈射物
 item.mospells\:ring_ice_crystal.name=冰晶指環
 item.mospells\:ring_wind_touch.desc=用冰霜法杖捶擊一個生物將釋放一股寒風，吹飛附近的敵人並凍結他們
 item.mospells\:ring_wind_touch.name=極地之風戒指
+
 entity.mospells\:barakoa_spirit_minion.name=獵頭族靈魂
 entity.mospells\:frostmaw_minion.name=冬之靈
 entity.mospells\:naga_minion.name=納迦海妖
