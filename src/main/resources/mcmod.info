@@ -6,7 +6,7 @@
         "version": "${version}",
         "mcversion": "${mcversion}",
         "url": "https://www.curseforge.com/minecraft/mc-mods/mo-spells",
-        "updateUrl": "",
+        "updateUrl": "https://raw.githubusercontent.com/WinDanesz/mo-spells/1.12.2/.forge/update.json",
         "authorList": ["WinDanesz"],
         "credits": "
         Created by WinDanesz
