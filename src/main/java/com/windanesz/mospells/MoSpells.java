@@ -2,7 +2,6 @@ package com.windanesz.mospells;
 
 import com.windanesz.mospells.registry.MSItems;
 import com.windanesz.mospells.registry.MSLoot;
-import electroblob.wizardry.spell.Spell;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,15 +10,12 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-import java.io.FileWriter;
-import java.io.IOException;
-
 @Mod(
 		modid = MoSpells.MODID,
 		name = MoSpells.MOD_NAME,
 		version = MoSpells.VERSION,
 		acceptedMinecraftVersions = "[@MCVERSION@]",
-		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required:mowziesmobs@[@MOWZIES_VERSION@,1.6);before:ancientspellcraft"
+		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required:mowziesmobs@[@MOWZIES_VERSION@,1.6)"
 )
 public class MoSpells {
 
