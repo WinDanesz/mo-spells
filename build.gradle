@@ -33,7 +33,7 @@ apply plugin: org.ajoberstar.grgit.gradle.GrgitPlugin
 
 group = "${project.maven_group}" // groupId
 archivesBaseName = "${project.mod_id}" // artifactId - modid
-version = "${project.mc_version}-${project.mod_version}"
+version = "${project.mod_version}"
 
 //// Project Settings ////
 
