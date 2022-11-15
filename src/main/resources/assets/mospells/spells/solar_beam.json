@@ -10,7 +10,7 @@
         "trades": false,
         "looting": true
     },
-    "tier": "advanced",
+    "tier": "apprentice",
     "element": "fire",
     "type": "attack",
     "cost": 25,
