@@ -13,9 +13,9 @@
     "tier": "advanced",
     "element": "earth",
     "type": "minion",
-    "cost": 40,
+    "cost": 80,
     "chargeup": 10,
-    "cooldown": 200,
+    "cooldown": 800,
     "base_properties": {
         "minion_lifetime": 600,
         "minion_count": 1,
