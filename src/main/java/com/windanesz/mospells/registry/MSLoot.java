@@ -28,6 +28,9 @@ public class MSLoot {
 
 	private static LootTable RARE_ARTEFACTS;
 	private static LootTable EPIC_ARTEFACTS;
+	private static LootTable SPELL_BOOK_HIGH;
+	private static LootTable SPELL_BOOK_MEDIUM;
+	private static LootTable SPELL_BOOK_LOW;
 
 	private static final List<String> HIGH_BOOK_CHANCE = Arrays.asList(
 			"mowziesmobs:entities/barako",
@@ -69,6 +72,12 @@ public class MSLoot {
 			RARE_ARTEFACTS = event.getTable();
 		} else if (event.getName().toString().equals(MoSpells.MODID + ":subsets/epic_artefacts")) {
 			EPIC_ARTEFACTS = event.getTable();
+		} else if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_high")) {
+			SPELL_BOOK_HIGH = event.getTable();
+		} else if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_medium")) {
+			SPELL_BOOK_MEDIUM = event.getTable();
+		} else if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_low")) {
+			SPELL_BOOK_LOW = event.getTable();
 		}
 
 		// ---------------------------------- INJECT ----------------------------------
@@ -77,12 +86,15 @@ public class MSLoot {
 
 			String name = event.getName().toString();
 
-			if (HIGH_BOOK_CHANCE.contains(name)) {
-				event.getTable().addPool(getAdditive(MoSpells.MODID + ":inject/mospells_spell_book_high", MoSpells.MODID + "_mospells_spell_book"));
-			} else if (MEDIUM_BOOK_CHANCE.contains(name)) {
-				event.getTable().addPool(getAdditive(MoSpells.MODID + ":inject/mospells_spell_book_medium", MoSpells.MODID + "_mospells_spell_book"));
-			} else {
-				event.getTable().addPool(getAdditive(MoSpells.MODID + ":inject/mospells_spell_book_low", MoSpells.MODID + "_mospells_spell_book"));
+			if (HIGH_BOOK_CHANCE.contains(name) && SPELL_BOOK_HIGH != null) {
+				LootPool sourcePool = SPELL_BOOK_HIGH.getPool("mospells");
+				event.getTable().addPool(sourcePool);
+			} else if (MEDIUM_BOOK_CHANCE.contains(name) && SPELL_BOOK_MEDIUM != null) {
+				LootPool sourcePool = SPELL_BOOK_MEDIUM.getPool("mospells");
+				event.getTable().addPool(sourcePool);
+			} else if(SPELL_BOOK_LOW != null) {
+				LootPool sourcePool = SPELL_BOOK_LOW.getPool("mospells");
+				event.getTable().addPool(sourcePool);
 			}
 
 		}
@@ -94,7 +106,6 @@ public class MSLoot {
 			if (event.getName().toString().equals(Wizardry.MODID + ":subsets/rare_artefacts") && RARE_ARTEFACTS != null) {
 				LootPool targetPool = event.getTable().getPool("rare_artefacts");
 				LootPool sourcePool = RARE_ARTEFACTS.getPool("main");
-
 				injectEntries(sourcePool, targetPool);
 			}
 			if (event.getName().toString().equals(Wizardry.MODID + ":subsets/epic_artefacts") && EPIC_ARTEFACTS != null) {
