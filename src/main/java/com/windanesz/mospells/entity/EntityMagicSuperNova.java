@@ -68,7 +68,7 @@ public class EntityMagicSuperNova extends EntitySuperNova {
 			}
 		}
 
-		if (caster != null) {
+		if (caster != null && !world.isRemote) {
 			float ageFrac = ticksExisted / (float) (EntitySuperNova.DURATION);
 			float scale = (float) Math.pow(ageFrac, 0.5) * 5f;
 			setSize(scale, scale);
