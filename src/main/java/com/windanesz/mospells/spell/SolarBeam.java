@@ -28,7 +28,16 @@ public class SolarBeam extends Spell {
 
 	@Override
 	public boolean cast(World world, EntityPlayer player, EnumHand hand, int ticksInUse, SpellModifiers modifiers) {
-
+		if (ticksInUse == 0  && WizardData.get(player).getVariable(SOLAR_BEAM_KEY) != null) {
+			WizardData data = WizardData.get((EntityPlayer) player);
+			if (data != null && data.getVariable(SOLAR_BEAM_KEY) != null) {
+				EntitySolarBeam beamToRemove = data.getVariable(SOLAR_BEAM_KEY);
+				if (beamToRemove != null) {
+					beamToRemove.setDead();
+				}
+				data.setVariable(SOLAR_BEAM_KEY, null);
+			}
+		}
 		if (ticksInUse > 10 && WizardData.get(player).getVariable(SOLAR_BEAM_KEY) == null) {
 
 			EntitySolarBeam solarBeam = new EntitySolarBeam(world, player, player.posX, player.posY + 1.2f, player.posZ, (float) ((player.rotationYawHead + 90) * Math.PI / 180), (float) (-player.rotationPitch * Math.PI / 180), 55);
