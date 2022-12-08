@@ -1,15 +1,15 @@
-<h2>Version v1.4.2 - 4/15/2022</h2>
+<h2>Version v1.0.4 - 12/8/2022</h2>
 <p>&nbsp;</p>
 <h3>What's Changed</h3>
 <p><span style="font-size: 1.2rem;">&nbsp;</span></p>
-<h4><strong>Bug Fixes</strong></h4>
-<p>- Fixed several issues caused by resetting the renderview entity every tick (#79) (bl4ckscor3)</p>
-<p>- Fixed Sorcery and Healing sage tome recipe</p>
-<p>- Fixed battlemage camp/chest empty loot table</p>
-<p>- Fixed apprentice battlemage sword missing its texture</p>
-
 <h4><strong>Features</strong></h4>
-<p>- Slightly increased the chance of getting Runic Plates</p>
+<p>- Increased cooldown of Summon Naga spell 10->40 seconds, mana cost 40->80</p>
+<p>- Lowered Solar Beam spell tier advanced->apprentice</p>
+
+<h4><strong>Bug Fixes</strong></h4>
+<p>- Fixed crash with Supernova spell on dedicated servers. Fixes #6</p>
+<p>- Solar Beam now works with the /cast command</p>
+<p>- Fixed Mo'Spells spell book drops from Mowzie mobs</p>
 <p>&nbsp;</p>
 <p>As always, the easiest way to get help or feedback is through the Discord server! Find the link on the CurseForge page.</p>
 <p>&nbsp;</p>
