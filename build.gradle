@@ -131,10 +131,8 @@ dependencies {
     // WizardryUtils dependency. The hack with libs is to allow quicker local development by pointing libs into the build/libs folder of WizardryUtils with a symbolic link
     //if (new FileNameFinder().getFileNames('libs', '**/WizardryUtils*.jar').size() > 0) {
     //    println 'Loading WizardryUtils dependency from local libs'
-    implementation fileTree('libs')
-    //} else {
-    // implementation fg.deobf("curse.maven:WizardryUtils-${wizardryutils_projectid}:${wizardryutils_fileid}")
-    //}
+    // implementation fileTree('libs')
+    implementation fg.deobf("curse.maven:WizardryUtils-${wizardryutils_projectid}:${wizardryutils_fileid}")
 
     //// Dependencies ////
 }
