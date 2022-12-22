@@ -1,7 +1,6 @@
 package com.windanesz.mospells.registry;
 
 import com.windanesz.mospells.MoSpells;
-import electroblob.wizardry.Wizardry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootEntry;
 import net.minecraft.world.storage.loot.LootEntryTable;
@@ -15,7 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,8 +24,6 @@ import java.util.List;
 @Mod.EventBusSubscriber
 public class MSLoot {
 
-	private static LootTable RARE_ARTEFACTS;
-	private static LootTable EPIC_ARTEFACTS;
 	private static LootTable SPELL_BOOK_HIGH;
 	private static LootTable SPELL_BOOK_MEDIUM;
 	private static LootTable SPELL_BOOK_LOW;
@@ -55,10 +51,6 @@ public class MSLoot {
 		LootTableList.register(new ResourceLocation(MoSpells.MODID, "inject/mospells_spell_book_medium"));
 		LootTableList.register(new ResourceLocation(MoSpells.MODID, "inject/mospells_spell_book_low"));
 
-		// subsets
-		LootTableList.register(new ResourceLocation(MoSpells.MODID, "subsets/rare_artefacts"));
-		LootTableList.register(new ResourceLocation(MoSpells.MODID, "subsets/epic_artefacts"));
-
 	}
 
 	@SubscribeEvent
@@ -66,13 +58,7 @@ public class MSLoot {
 
 		// ----------------------------------- INIT -----------------------------------
 
-		// Fortunately the loot tables of Mo'Spells load before wizardry so we can make a static reference to them and reuse it
-		// no uncommon artefacts yet
-		if (event.getName().toString().equals(MoSpells.MODID + ":subsets/rare_artefacts")) {
-			RARE_ARTEFACTS = event.getTable();
-		} else if (event.getName().toString().equals(MoSpells.MODID + ":subsets/epic_artefacts")) {
-			EPIC_ARTEFACTS = event.getTable();
-		} else if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_high")) {
+		if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_high")) {
 			SPELL_BOOK_HIGH = event.getTable();
 		} else if (event.getName().toString().equals(MoSpells.MODID + ":inject/mospells_spell_book_medium")) {
 			SPELL_BOOK_MEDIUM = event.getTable();
@@ -87,32 +73,22 @@ public class MSLoot {
 			String name = event.getName().toString();
 
 			if (HIGH_BOOK_CHANCE.contains(name) && SPELL_BOOK_HIGH != null) {
-				LootPool sourcePool = SPELL_BOOK_HIGH.getPool("mospells");
+				LootPool sourcePool = SPELL_BOOK_HIGH.getPool("mospells_with_artefact");
 				event.getTable().addPool(sourcePool);
+				LootPool sourcePool2 = SPELL_BOOK_HIGH.getPool("mospells_without_artefact");
+				event.getTable().addPool(sourcePool2);
 			} else if (MEDIUM_BOOK_CHANCE.contains(name) && SPELL_BOOK_MEDIUM != null) {
-				LootPool sourcePool = SPELL_BOOK_MEDIUM.getPool("mospells");
+				LootPool sourcePool = SPELL_BOOK_MEDIUM.getPool("mospells_with_artefact");
 				event.getTable().addPool(sourcePool);
+				LootPool sourcePool2 = SPELL_BOOK_MEDIUM.getPool("mospells_without_artefact");
+				event.getTable().addPool(sourcePool2);
 			} else if(SPELL_BOOK_LOW != null) {
-				LootPool sourcePool = SPELL_BOOK_LOW.getPool("mospells");
+				LootPool sourcePool = SPELL_BOOK_LOW.getPool("mospells_with_artefact");
 				event.getTable().addPool(sourcePool);
+				LootPool sourcePool2 = SPELL_BOOK_LOW.getPool("mospells_without_artefact");
+				event.getTable().addPool(sourcePool2);
 			}
 
-		}
-
-		// inject artefacts to ebwiz tables
-		if (Arrays.asList(MoSpells.settings.artefactInjectionLocations).contains(event.getName())) {
-
-			// No uncommon artefacts yet
-			if (event.getName().toString().equals(Wizardry.MODID + ":subsets/rare_artefacts") && RARE_ARTEFACTS != null) {
-				LootPool targetPool = event.getTable().getPool("rare_artefacts");
-				LootPool sourcePool = RARE_ARTEFACTS.getPool("main");
-				injectEntries(sourcePool, targetPool);
-			}
-			if (event.getName().toString().equals(Wizardry.MODID + ":subsets/epic_artefacts") && EPIC_ARTEFACTS != null) {
-				LootPool targetPool = event.getTable().getPool("epic_artefacts");
-				LootPool sourcePool = EPIC_ARTEFACTS.getPool("main");
-				injectEntries(sourcePool, targetPool);
-			}
 		}
 	}
 

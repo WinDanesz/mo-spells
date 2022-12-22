@@ -12,7 +12,6 @@ import static electroblob.wizardry.Settings.toResourceLocations;
 @Config(modid = MoSpells.MODID, name = "MoSpells") // No fancy configs here so we can use the annotation, hurrah!
 public class Settings {
 
-	public ResourceLocation[] artefactInjectionLocations = toResourceLocations(generalSettings.ARTEFACT_INJECTION_LOCATIONS);
 	public ResourceLocation[] spellbookInjectionLocations = toResourceLocations(generalSettings.SPELLBOOK_INJECTION_LOCATIONS);
 
 	@SuppressWarnings("unused")
@@ -35,13 +34,6 @@ public class Settings {
 	public static GeneralSettings generalSettings = new GeneralSettings();
 
 	public static class GeneralSettings {
-		@Config.Name("Artefact Inject locations")
-		@Config.Comment("List of loot tables to inject Mo' Spells artefacts into.")
-		public String[] ARTEFACT_INJECTION_LOCATIONS = {
-				"ebwizardry:subsets/uncommon_artefacts",
-				"ebwizardry:subsets/rare_artefacts",
-				"ebwizardry:subsets/epic_artefacts"
-		};
 
 		@Config.Name("Spell Book Inject locations")
 		@Config.Comment("List of loot tables to inject Mo' Spells spellbooks into.")

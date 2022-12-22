@@ -2,6 +2,7 @@ package com.windanesz.mospells.registry;
 
 import com.windanesz.mospells.MoSpells;
 import com.windanesz.mospells.item.ItemMSSpellBook;
+import com.windanesz.wizardryutils.registry.ItemRegistry;
 import electroblob.wizardry.block.BlockBookshelf;
 import electroblob.wizardry.inventory.ContainerBookshelf;
 import electroblob.wizardry.item.ItemArtefact;
@@ -49,6 +50,7 @@ public final class MSItems {
 	public static final Item amulet_golden_sun = placeholder();
 
 	public static final Item charm_cold_winds = placeholder();
+	public static final Item charm_monster_tome = placeholder();
 
 	@SubscribeEvent
 	public static void register(RegistryEvent.Register<Item> event) {
@@ -58,15 +60,15 @@ public final class MSItems {
 		registerItem(registry, "mospells_spell_book", new ItemMSSpellBook());
 		registerItem(registry, "mospells_scroll", new ItemScroll());
 
-		registerItem(registry, "ring_wind_touch", new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.RING).setCreativeTab(WizardryTabs.GEAR));
-		registerItem(registry, "ring_ice_crystal", new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.RING).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "ring_wind_touch", MoSpells.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.RING).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "ring_ice_crystal", MoSpells.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.RING).setCreativeTab(WizardryTabs.GEAR));
 
-		registerItem(registry, "amulet_earth", new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
-		registerItem(registry, "amulet_frostmaw", new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
-		registerItem(registry, "amulet_golden_sun", new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "amulet_earth", MoSpells.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "amulet_frostmaw", MoSpells.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "amulet_golden_sun", MoSpells.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET).setCreativeTab(WizardryTabs.GEAR));
 
-		registerItem(registry, "charm_cold_winds", new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.CHARM).setCreativeTab(WizardryTabs.GEAR));
-
+		ItemRegistry.registerItemArtefact(registry, "charm_cold_winds", MoSpells.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.CHARM).setCreativeTab(WizardryTabs.GEAR));
+		ItemRegistry.registerItemArtefact(registry, "charm_monster_tome", MoSpells.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.CHARM).setCreativeTab(WizardryTabs.GEAR));
 	}
 
 	/**

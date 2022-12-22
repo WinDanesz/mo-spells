@@ -1,7 +1,35 @@
 {
     "pools": [
         {
-            "name": "mospells",
+            "name": "mospells_with_artefact",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "empty",
+                    "weight": 40
+                },
+                {
+                    "type": "item",
+                    "name": "mospells:mospells_spell_book",
+                    "entryName": "mospells_spell_book",
+                    "weight": 60,
+                    "functions": [
+                        {
+                            "function": "ebwizardry:random_spell",
+                            "undiscovered_bias": 0.6
+                        }
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "wizardryutils:artefact_condition",
+                    "required_artefact": "mospells:charm_monster_tome"
+                }
+            ]
+        },
+        {
+            "name": "mospells_without_artefact",
             "rolls": 1,
             "entries": [
                 {
@@ -19,6 +47,13 @@
                             "undiscovered_bias": 0.6
                         }
                     ]
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "wizardryutils:artefact_condition",
+                    "required_artefact": "mospells:charm_monster_tome",
+                    "invert": true
                 }
             ]
         }

@@ -2,6 +2,7 @@ package com.windanesz.mospells;
 
 import com.windanesz.mospells.registry.MSItems;
 import com.windanesz.mospells.registry.MSLoot;
+import com.windanesz.wizardryutils.registry.ItemModelRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -15,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 		name = MoSpells.MOD_NAME,
 		version = MoSpells.VERSION,
 		acceptedMinecraftVersions = "[@MCVERSION@]",
-		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required:mowziesmobs@[@MOWZIES_VERSION@,1.6)"
+		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required-after:wizardryutils@[@WIZARDRY_UTILS_VERSION@,2.0);required:mowziesmobs@[@MOWZIES_VERSION@,1.6)"
 )
 public class MoSpells {
 
@@ -48,6 +49,8 @@ public class MoSpells {
 	public void preinit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 		settings = new Settings();
+
+		ItemModelRegistry.registerModForAutoItemModelRegistry(MODID);
 
 		proxy.registerRenderers();
 		MSItems.registerBookshelfModelTextures();
