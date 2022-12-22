@@ -128,6 +128,13 @@ dependencies {
     implementation fg.deobf("curse.maven:baubles-${baubles_projectid}:${baubles_fileid}")
     implementation fg.deobf("curse.maven:MowziesMobs-${mowzies_projectid}:${mowzies_fileid}")
     implementation fg.deobf("curse.maven:LLibrary-${llibrary_projectid}:${llibrary_fileid}")
+    // WizardryUtils dependency. The hack with libs is to allow quicker local development by pointing libs into the build/libs folder of WizardryUtils with a symbolic link
+    //if (new FileNameFinder().getFileNames('libs', '**/WizardryUtils*.jar').size() > 0) {
+    //    println 'Loading WizardryUtils dependency from local libs'
+    implementation fileTree('libs')
+    //} else {
+    // implementation fg.deobf("curse.maven:WizardryUtils-${wizardryutils_projectid}:${wizardryutils_fileid}")
+    //}
 
     //// Dependencies ////
 }
@@ -330,6 +337,7 @@ task replaceTokens(type: Sync) {
     filter(ReplaceTokens, tokens: [VERSION: version.toString()])
     filter(ReplaceTokens, tokens: [MCVERSION: "${project.mc_version}".toString()])
     filter(ReplaceTokens, tokens: [WIZARDRY_VERSION: "${project.wizardry_version}".toString()])
+    filter(ReplaceTokens, tokens: [WIZARDRY_UTILS_VERSION: "${project.wizardry_utils_version}".toString()])
     filter(ReplaceTokens, tokens: [MOWZIES_VERSION: "${project.mowzies_version}".toString()])
     into "$buildDir/src"
 }
