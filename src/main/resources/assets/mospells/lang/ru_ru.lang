@@ -1,0 +1,63 @@
+### Если вы обнаружите ошибки или неточности в этом переводе, пожалуйста, сообщите мне о них в комментариях, и тогда в следующей версии перевода они будут устранены. [ Heimdallr-1]
+
+# PARSE_ESCAPES
+
+spell.mospells\:frost_breath=Морозное дуновение
+spell.mospells\:frozen_orb=Замёрзшая сфера
+spell.mospells\:lesser_geomancy=Малая геомантия
+spell.mospells\:naga_aspect=Черта Наги
+spell.mospells\:pillar=Опора
+spell.mospells\:poison_ball=Ядовитый шар
+spell.mospells\:rupture=Разрыв
+spell.mospells\:solar_beam=Солнечный луч
+spell.mospells\:solar_flare=Солнечная вспышка
+spell.mospells\:summon_barakoa_spirit=Призыв духа Баракоа
+spell.mospells\:summon_frostmaw=Призыв ледочрев
+spell.mospells\:summon_naga=Призыв наги
+spell.mospells\:summon_spirit_pack=Призыв стаи духов
+spell.mospells\:suns_blessing=Благословение солнца
+spell.mospells\:sunstrike=Солнечный удар
+spell.mospells\:supernova=Сверхновая
+spell.mospells\:winds_of_winter=Ветер зимы
+
+spell.mospells\:winds_of_winter.desc=Холодный ветер исходит из жезла колдуна в разные стороны, отталкивая существ и замораживая их.
+spell.mospells\:supernova.desc=Стирает ваших врагов с лица земли мощью солнца.
+spell.mospells\:sunstrike.desc=Наколдовывает мощный солнечный луч с неба туда, куда указывает колдун, нанося урон близлежащим врагам.
+spell.mospells\:suns_blessing.desc=Посылает указанному игроку Благословение солнца.
+spell.mospells\:summon_spirit_pack.desc=Призывает стаю духов Баракона, чтобы защищать вас. Духи исчезнут по истечении 45 секунд или пока их не убьют.
+spell.mospells\:summon_naga.desc=Призывает Нагу, чтобы защищать вас. Нага исчезнет по истечении 45 секунд или пока её не убьют.
+spell.mospells\:summon_frostmaw.non_ice_wand=Только ледяной жезл магистра может призвать Ледочрев.
+spell.mospells\:summon_frostmaw.desc=Призывает ледочрева, чтобы защищать вас. Ледочрев исчезнет по истечении 1,5 минуты или пока его не убьют. Заклинание можно использовать только раз в день.
+spell.mospells\:summon_barakoa_spirit.desc=Призывает духа Баракоа, чтобы защищать вас. Дух исчезнет по истечении 30 секунд или пока его не убьют.
+spell.mospells\:solar_flare.desc=Накапливает солнечную энергию во время направления, затем высвобождает её, чтобы поджечь всех близлежащих врагов и отталкивает их взрывом.
+spell.mospells\:solar_beam.desc=После непродолжительного направления высвобождает мощь Гелиомантии, поджигая всех врагов, попавшие под луч.
+spell.mospells\:rupture.desc=Разрывает землю перед колдуном, нанося урон и отталкивая всех врагов.
+spell.mospells\:poison_ball.desc=Швыряет ядовитый шар Наги в указанное направление, который наносит урон и отравляет цели при ударе.
+spell.mospells\:pillar.desc=Наколдовывает левитирующую опору под игроком при условии, что игрок стоит на камне или земле. Опора исчезнет по истечении 60 секунд.
+spell.mospells\:naga_aspect.desc=Наделяет колдуна ядостойкостью в течение 30 секунд.
+spell.mospells\:lesser_geomancy.desc=Направление жезла на землю, создаёт парящий валун. Повторное использование заклинания по валуну, бросает его в качестве снаряда.
+spell.mospells\:frozen_orb.desc=Выпускает большую ледяную сферу в указанное направление от колдуна, которая проходит через врагов, замораживает их и наносит сокрушительный урон.
+spell.mospells\:frost_breath.desc=Создаёт мощный порыв мороза, наносящий урон всем врагам, попавшие под порыв и замораживает их до твёрдого состояния в течение долгого времени.
+
+cannot_use_spell_again_today=Cегодня вы не сможете снова использовать заклинание.
+
+item.mospells\:amulet_earth.desc=Заклинание Опора вызывает большую земляную опору.\nМалая геомантия может манипулировать большими валунами и опорами.
+item.mospells\:amulet_earth.name=Земной амулет
+item.mospells\:amulet_frostmaw.desc=Предоставляет 25%% к силе Ледяного заклинания.\nИспользование ледяного заклинания предоставляет непродолжительный эффект Ледяной покров.\nВы должны сразить Ледорта, чтобы заставить этот артефакт подчиняться вам.
+item.mospells\:amulet_frostmaw.name=Ожерелье из рога ледорта
+item.mospells\:amulet_golden_sun.desc=Предоставляет 25%% к силе Огненного заклинания.\nИспользование огненного заклинания предоставляет непродолжительный эффект Огненная кожа и Огнестойкость.\nВы должны сразить Барако, чтобы заставить этот артефакт подчиняться вам.
+item.mospells\:amulet_golden_sun.name=Медальон золотого солнца
+item.mospells\:charm_cold_winds.desc=Усиливает воздействие холода Ветра зимы, заставляя гасить горящих существ и огонь, а также в течение некоторого времени наносить морозный урон всем близлежащим существам.
+item.mospells\:charm_cold_winds.name=Замёрзший талисман
+item.mospells\:charm_monster_tome.desc=Удваивает шанс добычи колдовских книг из Mowzie mobs.
+item.mospells\:charm_monster_tome.name=Фолиант монстра
+item.mospells\:mospells_scroll.name=Свиток %1$s
+item.mospells\:mospells_spell_book.name=Колдовская книга
+item.mospells\:ring_ice_crystal.desc=Заклинание Морозное дыхание cможет сдувать снаряды.
+item.mospells\:ring_ice_crystal.name=Кольцо с ледяным кристаллом
+item.mospells\:ring_wind_touch.desc=Поражение существа ледяным жезлом высвобождает холодный порыв ветра, отталкивая близлежащих врагов и замораживая их.
+item.mospells\:ring_wind_touch.name=Кольцо северного ветра
+
+entity.mospells\:barakoa_spirit_minion.name=Дух Баракоа
+entity.mospells\:frostmaw_minion.name=Ледочрев
+entity.mospells\:naga_minion.name=Нага
